@@ -29,6 +29,7 @@ app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.
 require("./routes/trivia-routes.js")(app); 
+require("./routes/user-routes.js")(app); 
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
