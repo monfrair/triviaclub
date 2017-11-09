@@ -1,4 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
+
   var triviaUser = sequelize.define("Post", {
     firstName: {
       type: DataTypes.STRING,
