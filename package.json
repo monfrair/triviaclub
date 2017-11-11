@@ -21,8 +21,11 @@
     "chai": "^4.1.2",
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
+<<<<<<< HEAD
     "mocha": "^4.0.1",
     "mysql": "^2.15.0",
+=======
+>>>>>>> c23279e4f988d0ac754d9eb0622ce8cb6aa51130
     "mysql2": "^1.4.2",
     "sequelize": "^4.22.4"
   }

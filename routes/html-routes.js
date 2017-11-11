@@ -1,35 +1,22 @@
-// *********************************************************************************
-// html-routes.js - this file offers a set of routes for sending users to the various html pages
-// *********************************************************************************
 
-// Dependencies
-// =============================================================
 var path = require("path");
 
-// Routes
-// =============================================================
 module.exports = function(app) {
+  
+    app.get("/", function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/login.html"));
+    });
 
-  // Each of the below routes just handles the HTML page that the user gets sent to.
+    app.get("/register", function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/register.html"));
+    });
 
-  // index route loads view.html
-  app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/login.html"));
-  });
+    app.get("/trivia", function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/trivia.html"));
+    });
 
-  // cms route loads cms.html
-  app.get("/cms", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/user-profile.html"));
-  });
-
-  // blog route loads blog.html
-  app.get("/blog", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/trivia.html"));
-  });
-
-  // authors route loads author-manager.html
-  app.get("/authors", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/register.html"));
-  });
-
+    app.get("/profile", function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/user-profile.html"));
+    });
 };
+
